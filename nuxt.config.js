@@ -53,6 +53,9 @@ export default {
     baseURL: process.env.API_URL,
     proxy: false
   },
+  env: {
+    API_URL: 'https://testdrive.kompletecare.com/api/'
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
