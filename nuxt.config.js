@@ -50,12 +50,10 @@ export default {
   },
   axios: {
     // extra config e.g
-    baseURL: process.env.API_URL,
+    baseURL: 'https://testdrive.kompletecare.com/api/',
     proxy: false
   },
-  env: {
-    API_URL: 'https://testdrive.kompletecare.com/api/'
-  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
