@@ -108,15 +108,15 @@ export default {
         })
     },
     getList () {
-      let config = {
-        header: {
-          'Authorization': 'Bearer ' + this.token
-        }
-      }
+
       let vm = this;
-      this.$axios.get('/investigations', config).then(res => {
+      this.$axios.get('/investigations', {
+        headers: {
+          'Authorization': `Bearer ${this.token}`
+        }
+      }).then(res => {
         console.log(res)
-        res.data.forEach(i => {
+        res.data.data.forEach(i => {
           if (i.id === 1) {
             vm.xray_list = i
           }
