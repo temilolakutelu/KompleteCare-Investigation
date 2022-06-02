@@ -87,6 +87,7 @@ export default {
     }
   },
   mounted () {
+
     this.handleLogin()
     // this.getList()
   },
@@ -148,10 +149,13 @@ export default {
       this.$axios.post('/investigations', data, config)
         .then(res => {
           console.log(res)
-          vm.token = res.data.token;
-          vm.getList();
+          this.$swal('Success!',
+            'Your Submission is successful',
+            'success')
         }).catch(err => {
-          console.log(err)
+          this.$swal('Oops!',
+            err,
+            'error')
         })
     }
   }

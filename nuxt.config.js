@@ -42,7 +42,12 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
+    'vue-sweetalert2/nuxt'
   ],
+  sweetalert: {
+    confirmButtonColor: '#41b882',
+    cancelButtonColor: '#ff7674'
+  },
   axios: {
     // extra config e.g
     baseURL: process.env.API_URL,
