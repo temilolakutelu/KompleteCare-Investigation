@@ -170,3 +170,9 @@
                              color: #FFFFFF;
                              border: 0;
                          }
+                         
+                         @media screen and (max-width:768px) {
+                             .nav-link span {
+                                 font-size: 14px;
+                             }
+                         }

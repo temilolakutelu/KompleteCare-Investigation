@@ -49,16 +49,10 @@ export default {
     cancelButtonColor: '#ff7674'
   },
   axios: {
-    baseURL: process.env.BASE_URL || 'https://testdrive.kompletecare.com/',
-    proxy: false
+    // extra config e.g
+    baseURL: 'https://testdrive.kompletecare.com/api/',
   },
-  proxy: {
-    '/api/': 'https://testdrive.kompletecare.com/'
-  },
-  //environment variables
-  env: {
-    BASE_URL: 'https://testdrive.kompletecare.com/'
-  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }

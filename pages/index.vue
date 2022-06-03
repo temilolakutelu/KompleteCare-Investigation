@@ -98,19 +98,21 @@ export default {
         email: "tester@kompletecare.com",
         password: "password"
       };
-      await this.$axios.post('/API/login/', data)
+      await this.$axios.post('/login/', data)
         .then(res => {
           console.log(res.data.data)
           vm.token = res.data.data.token;
-          vm.getList();
+          // vm.getList();
         }).catch(err => {
           console.log(err)
         })
+
+
     },
     getList () {
 
       let vm = this;
-      this.$axios.get('/API/investigations/', {
+      this.$axios.get('/investigations/', {
         headers: {
           'Authorization': `Bearer ${this.token}`
         }
